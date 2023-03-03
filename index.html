@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- Michael Roman -->
+<html lang="en">
+  <head>
+    <!-- 	Purpose of this application is to get the random quotable quotes data from the Rapid API utilizing
+	Javascript/Jquery and AJAX and then choose the favorite quote and add it to the list below and store
+	it in the Browser DOM-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Random quote generators and adding favorite quote on the list"
+    />
+    <meta name="author" content="Michael Roman" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quotes</title>
+    <!-- Imported jquery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <style>
+      /* Basic styling information random quotes */
+      body {
+        background-color: #f5f5dc;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+      }
+      #btnGetRandomQuote,
+      #out {
+        font-size: 1em;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #btnGetRandomQuote {
+        margin-top: 10px;
+      }
+
+      #out {
+        background-color: #c9bda7;
+        padding: 25px;
+        margin: 10px;
+        height: 70px;
+        font-weight: bold;
+        border-style: double;
+      }
+
+      /* CSS styling for the Favorite quote section */
+      #quote,
+      #author,
+      #btnAdd {
+        font-size: 1em;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #btnAdd {
+        margin-top: 10px;
+      }
+
+      table {
+        position: relative;
+        top: 20px;
+        width: 100%;
+        margin-top: 10px;
+        border-style: double;
+        border-collapse: collapse;
+        background-color: #c9bda7;
+      }
+
+      td,
+      th {
+        border-style: double;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Random quotes from well-known personalities</h1>
+    <p>Click the button below to see the random quotes</p>
+
+    <button id="btnGetRandomQuote">Get The Random Quotes</button>
+    <!-- The "out" div is used to print the result of the data from the web server -->
+    <div id="out"></div>
+    <br />
+    <h1>Favorite Quote</h1>
+    <p>
+      Any short random quote that you like? Copy the random quote and author
+      information from above <br />
+      and then paste them in the form below. Or you can add your own favorite
+      quote and provide the <br />
+      originator of the quote. Don't forget to click the add button.
+    </p>
+    <label for="favoriteQuote">Quote</label>
+    <input type="text" id="favoriteQuote" size="60" />
+    <label for="author">Author</label>
+    <input type="text" id="author" />
+    <br /><button id="btnAdd">Add favorite short quote</button>
+
+    <table>
+      <tr>
+        <th>Quote</th>
+        <th>Author</th>
+      </tr>
+    </table>
+    <script type="text/javascript" src="jsjqfinal.js"></script>
+  </body>
+</html>
